@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--<link rel="stylesheet" type="text/css" href="public/css/main.css"/>-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+          integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+
+    <title>Phone Book</title>
+</head>
+<body class="background">
+<div class="container myContainer">
+    <h1 class="heading">Yellow Pages</h1>
+
+    <ul class="nav nav-tabs nav-fill mt-4 text-dark" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" role="tab" href="#myRecordList">Contact List</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" role="tab" href="#addContactDiv">Add Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" role="tab" href="#searchContacts">Search</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="mycontent">
+
+        <div id="myRecordList" role="tabpanel" class="tab-pane fade show active">
+            <div class="list-group mt-5 recordList">
+                <div type="button" class="list-group-item list-group-item-action recordItem" >
+                    <div class="row m-2">
+                        <div class="col-10">
+                            <div class="row">
+                                <label class="lastName">Rastogi</label>,&nbsp;
+                                <label class="firstName">Shubham</label>
+                            </div>
+                            <div class="row">
+                                <label class="email">rast@gmail.com </label>,&nbsp;
+                                <label classs="phone">999-999-9999</label>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <i class="fas fa-trash btn deleteBtn" ></i>
+                        </div>
+                        <div class="col-1">
+                            <i class="fas fa-edit btn editBtn"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="searchContacts" role="tabpanel" class="tab-pane fade">
+
+            </div>
+            <div id="addContactDiv" role="tabpanel" class="tab-pane fade">
+                <div class="input-group mb-3 mt-5">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" id="iFirstName">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default2">Last Name</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default2" id="iLastName">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default3">Email</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default3" id="iEmail">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default4">Phone #</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default4" id="iPhone">
+                </div>
+                <button type="button" class="btn btn-success" id="addContact">Add Contact</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+</html>
