@@ -8,35 +8,38 @@ import './../scss/main.scss';
     let createButton;
     let listDiv;
     let listItemTemplate;
-    let phoneBookService =  require('./service/phonebook.service.client');
+    let phoneBookService = require('./service/phonebook.service.client');
 
 
     main();
 
     function main() {
 
-        inputFirstName = document.getElementsByClassName('iFirstName');
-        inputLastName = document.getElementsByClassName('iLastName');
-        inputEmail = document.getElementsByClassName('iEmail');
-        inputPhone = document.getElementsByClassName('iPhone');
+        inputFirstName = document.getElementById('iFirstName');
+        inputLastName = document.getElementById('iLastName');
+        inputEmail = document.getElementById('iEmail');
+        inputPhone = document.getElementById('iPhone');
         createButton = document.getElementById('addContact');
-        listDiv = document.getElementsByClassName('recordList');
-        listItemTemplate = document.getElementsByClassName('recordItem');
+        listDiv = document.getElementById('recordList');
+        listItemTemplate = document.getElementsByClassName('recordItem')[0];
 
-        createButton.onclick = createRecord ;
+        createButton.onclick = createRecord;
         findAllContacts();
 
     }
 
 
     function createRecord(event) {
-        // clearMessage();
         console.log('create record');
-        //phoneBookService.
-        // var validation=disableBrowserValidations(event);
-        // if(validation==true) {
-        //     userService.verifyUser($usernameFld.val(), successVerification);
-        // }
+        let record = {
+            "firstname":inputFirstName.value,
+            "lastname":inputLastName.value,
+            "phone":inputPhone.value,
+            "email":inputEmail.value
+        };
+        phoneBookService.createContact(record,findAllContacts);
+        //console.log(record);
+
 
     }
 
@@ -49,19 +52,19 @@ import './../scss/main.scss';
 
     function renderContacts(records) {
         console.log('render all contacts');
-        if(listDiv.hasChildNodes()){
+       // console.log(records);
+        if (listDiv.hasChildNodes()) {
 
             while (listDiv.firstChild) {
                 listDiv.removeChild(listDiv.firstChild);
             }
-            //listDiv.childNodes.forEach((i) => listDiv.removeChild(listDiv.childNodes[i]));
         }
         for (let rec in records) {
             let record = listItemTemplate.cloneNode(true);
             record.querySelector('.firstName').innerHTML = records[rec].firstname;
             record.querySelector('.lastName').innerHTML = records[rec].lastname;
-            record.querySelector('.email').innerHTML = records[rec].phone;
-            record.querySelector('.phone').innerHTML = records[rec].email;
+            record.querySelector('.email').innerHTML = records[rec].email;
+            record.querySelector('.phone').innerHTML = records[rec].phone;
             record.setAttribute('id', records[rec]._id);
             record.querySelector('.editBtn').onclick = editRecord;
             record.querySelector('.deleteBtn').onclick = deleteRecord;
@@ -76,10 +79,9 @@ import './../scss/main.scss';
 
 
     function deleteRecord(e) {
-        console.log('in delete');
-        phoneBookService.deleteContact(e.parent.id,findAllContacts);
+        let id = e.target.parentNode.parentNode.parentNode.id;
+        phoneBookService.deleteContact(id, findAllContacts);
     }
-
 
 
     // function successVerification(users){

@@ -19,7 +19,7 @@ module.exports = {
 };
 
 function createContact(contact, callback) {
-
+    console.log(contact);
     return fetch(url, {
         method: 'POST',
         body: JSON.stringify(contact),

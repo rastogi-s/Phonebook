@@ -17,25 +17,27 @@
     <title>Phone Book</title>
 </head>
 <body class="background">
-<div class="container myContainer">
+<div class="container myContainer pb-4">
     <h1 class="heading">Yellow Pages</h1>
 
     <ul class="nav nav-tabs nav-fill mt-4 text-dark" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" role="tab" href="#myRecordList">Contact List</a>
+            <a class="nav-link active" id="contactListTab" data-toggle="tab" role="tab" href="#myRecordList"
+               aria-controls="myRecordList" aria-selected="true">Contact List</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" role="tab" href="#addContactDiv">Add Contact</a>
+            <a class="nav-link" id="addContactTab" data-toggle="tab" role="tab" href="#addContactDiv"
+               aria-controls="addContactDiv" aria-selected="false">Add Contact</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" role="tab" href="#searchContacts">Search</a>
+            <a class="nav-link" id="searchContactTab" data-toggle="tab" role="tab" href="#searchContacts"
+               aria-controls="home" aria-selected="false">Search</a>
         </li>
     </ul>
     <div class="tab-content" id="mycontent">
-
         <div id="myRecordList" role="tabpanel" class="tab-pane fade show active">
-            <div class="list-group mt-5 recordList">
-                <div type="button" class="list-group-item list-group-item-action recordItem" >
+            <div class="list-group mt-5" id="recordList">
+                <div class="list-group-item list-group-item-action recordItem">
                     <div class="row m-2">
                         <div class="col-10">
                             <div class="row">
@@ -44,52 +46,103 @@
                             </div>
                             <div class="row">
                                 <label class="email">rast@gmail.com </label>,&nbsp;
-                                <label classs="phone">999-999-9999</label>
+                                <label class="phone">999-999-9999</label>
                             </div>
                         </div>
                         <div class="col-1">
-                            <i class="fas fa-trash btn deleteBtn" ></i>
+                            <i class="fa fa-1x fa-trash btn deleteBtn" role="button"></i>
                         </div>
                         <div class="col-1">
-                            <i class="fas fa-edit btn editBtn"></i>
+                            <i class="fa fa-1x fa-edit btn editBtn" role="button" data-toggle="modal"
+                               data-target="#exampleModalCenter"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="searchContacts" role="tabpanel" class="tab-pane fade">
+        </div>
+        <div id="searchContacts" role="tabpanel" class="tab-pane fade">
 
+        </div>
+        <div id="addContactDiv" role="tabpanel" class="tab-pane fade">
+            <div class="input-group mb-3 mt-5">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default" id="iFirstName">
             </div>
-            <div id="addContactDiv" role="tabpanel" class="tab-pane fade">
-                <div class="input-group mb-3 mt-5">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default" id="iFirstName">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default2">Last Name</span>
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default2">Last Name</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default2" id="iLastName">
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default2" id="iLastName">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default3">Email</span>
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default3">Email</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default3" id="iEmail">
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default3" id="iEmail">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default4">Phone #</span>
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default4">Phone #</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default4" id="iPhone">
-                </div>
-                <button type="button" class="btn btn-success" id="addContact">Add Contact</button>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default4" id="iPhone">
+            </div>
+            <button type="button" class="btn btn-success" id="addContact">Add Contact</button>
 
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered text-dark" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Edit Record</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="editFirstNameGroup">First Name</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="editFirstNameGroup" id="editFirstName">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="editLastNameGroup">Last Name</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="editLastNameGroup" id="editLastName">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="editEmailGroup">Email</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="editEmailGroup" id="editEmail">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="editPhoneGroup">Phone #</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-default4" id="editPhone">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
     </div>
