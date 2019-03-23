@@ -43,31 +43,31 @@ function findAllContacts(callback) {
 }
 
 function findContactById(contactId, callback) {
-    return fetch(url + self.urlFindById + contactId).then(function (response) {
+    return fetch(url + urlFindById + contactId).then(function (response) {
         return response.json();
     }).then(callback);
 }
 
 function findContactsByFirstName(firstName, callback) {
-    return fetch(url + self.urlFindByFirstName + firstName).then(function (response) {
+    return fetch(url + urlFindByFirstName + firstName).then(function (response) {
         return response.json();
     }).then(callback);
 }
 
 function findContactsByLastName(lastName, callback) {
-    return fetch(url + self.urlFindByLastName + lastName).then(function (response) {
+    return fetch(url + urlFindByLastName + lastName).then(function (response) {
         return response.json();
     }).then(callback);
 }
 
 function findContactsByEmail(email, callback) {
-    return fetch(url + self.urlFindByEmail + email).then(function (response) {
+    return fetch(url + urlFindByEmail + email).then(function (response) {
         return response.json();
     }).then(callback);
 }
 
 function findContactByPhone(phone, callback) {
-    return fetch(url + self.urlFindByPhone + phone).then(function (response) {
+    return fetch(url + urlFindByPhone + phone).then(function (response) {
         return response.json();
     }).then(callback);
 }
