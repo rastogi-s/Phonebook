@@ -44,24 +44,32 @@
                 </div>
             </div>
             <div class="list-group mt-3" id="recordList">
-                <div class="list-group-item list-group-item-action recordItem">
-                    <div class="row m-2">
-                        <div class="col">
-                            <div class="row">
-                                <label class="lastName">Rastogi</label>,&nbsp;
-                                <label class="firstName">Shubham</label>
-                            </div>
-                            <div class="row">
-                                <label class="email">rast@gmail.com </label>,&nbsp;
-                                <label class="phone">999-999-9999</label>
-                            </div>
+                <div class="list-group-item list-group-item-action recordItem pl-0 h-0" data-toggle="collapse"
+                     data-target="#detailsDiv"  >
+                    <div class="row mx-1">
+                        <div class="col-sm-0.5 mx-2">
+                            <i class="fa fa-1x fa-user bg-primary p-2 rounded-circle"></i>
+                        </div>
+                        <div class="col text-left align-center ">
+                            <!--<div class="row">-->
+                                <label class="lastName p-0">Rastogi</label>,&nbsp;
+                                <label class="firstName p-0">Shubham</label>
+                            <!--</div>-->
+                            <!--<div class="row  d-none">-->
+
+                            <!--</div>-->
                         </div>
                         <div class="col-sm-0.1 mr-2">
-                           <i class="fas fa-trash-alt btn deleteBtn p-0 mt-4 mb-3"  role="button" ></i>
+                           <i class="fas fa-trash-alt btn deleteBtn p-0"  role="button" ></i>
                         </div>
                         <div class="col-sm-0.1 ml-1">
-                            <i class="fas fa-edit btn editBtn p-0 mt-4 mb-3"  role="button" data-toggle="modal"
+                            <i class="fas fa-edit btn editBtn p-0"  role="button" data-toggle="modal"
                                data-target="#exampleModalCenter"></i>
+                        </div>
+                        <div class="collapse bg-light w-100 detailsDiv text-left" id="detailsDiv" data-parent="#recordList">
+                            <hr>
+                            <span class="text-muted ml-3">  Email: <span class="email"> rast@gmail.com </span></span><br>
+                            <span class="text-muted ml-3">  Phone Number:  <span class="phone text-muted ml-3">999-999-9999</span></span>
                         </div>
                     </div>
                 </div>
