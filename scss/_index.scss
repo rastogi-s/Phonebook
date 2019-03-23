@@ -3,12 +3,17 @@
     background-size: cover;
 }
 
+@media only screen and (min-width: 600px){
+    .myContainer {
+        max-width: 35%;
+    }
+}
+
 .myContainer{
     background-color:rgba(0, 0, 0, 0.5);
     margin-top: 3rem;
     //align-content: center;
     text-align: center;
-    width: 35%;
     min-height: 650px;
     max-height: 750px;
     color: #ffffff;
