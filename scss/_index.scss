@@ -3,11 +3,13 @@
     background-size: cover;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 1027px){
     .myContainer {
         max-width: 35%;
     }
 }
+
+
 
 .myContainer{
     background-color:rgba(0, 0, 0, 0.5);
