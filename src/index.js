@@ -171,10 +171,13 @@ import './../scss/main.scss';
                 record.querySelector('.email').innerHTML = records[rec].email;
                 record.querySelector('.phone').innerHTML = records[rec].phone;
                 record.setAttribute('id', records[rec]._id);
-               record.setAttribute('data-target', '#'+'detailsDiv'+records[rec]._id);
-               record.querySelector('.detailsDiv').setAttribute('id', 'detailsDiv'+records[rec]._id);
+                record.setAttribute('data-target', '#'+'detailsDiv'+records[rec]._id);
+                record.querySelector('.detailsDiv').setAttribute('id', 'detailsDiv'+records[rec]._id);
                 record.querySelector('.editBtn').onclick = editRecord;
                 record.querySelector('.deleteBtn').onclick = deleteRecord;
+                // record.addEventListener('click', function (event) {
+                //     record.classList.toggle('button-active')
+                // })
                 listDiv.appendChild(record);
             }
         }
