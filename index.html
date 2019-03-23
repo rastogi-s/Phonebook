@@ -77,143 +77,146 @@
                                             class="phone">999-999-9999</span></span>
                                 </div>
                                 <div class="col-sm-0.3">
-                                    <i class="fa fa-2x fa-paper-plane btn share float-right mr-3" data-toggle="modal" data-target="#shareModal"> </i>
+                                    <i class="fa fa-2x fa-paper-plane btn share float-right mr-3" data-toggle="modal"
+                                       data-target="#shareModal"> </i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--<div id="searchContacts" role="tabpanel" class="tab-pane fade">-->
+        </div>
+        <!--<div id="searchContacts" role="tabpanel" class="tab-pane fade">-->
 
-            <!--</div>-->
-            <div id="addContactDiv" role="tabpanel" class="tab-pane fade">
-                <div class="input-group mb-3 mt-5">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
-                    </div>
-                    <input type="text" name="First Name" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default" id="iFirstName">
+        <!--</div>-->
+        <div id="addContactDiv" role="tabpanel" class="tab-pane fade">
+            <div class="input-group mb-3 mt-5">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default2">Last Name</span>
-                    </div>
-                    <input type="text" name="Last Name" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default2" id="iLastName" required>
+                <input type="text" name="First Name" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default" id="iFirstName">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default2">Last Name</span>
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default3">Email</span>
-                    </div>
-                    <input type="email" name="Email" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default3" id="iEmail">
+                <input type="text" name="Last Name" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default2" id="iLastName" required>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default3">Email</span>
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default4">Phone #</span>
-                    </div>
-                    <input type="tel" name="Phone #" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default4" pattern="[0-9]{10}" id="iPhone" maxlength="10"
-                           minlength="10" required>
+                <input type="email" name="Email" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default3" id="iEmail">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default4">Phone #</span>
                 </div>
-                <button type="button" class="btn btn-success" id="addContact">Add Contact</button>
-                <div class="alert alert-danger text-left mt-3" role="alert" id="alertAdd">
+                <input type="tel" name="Phone #" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default4" pattern="[0-9]{10}" id="iPhone" maxlength="10"
+                       minlength="10" required>
+            </div>
+            <button type="button" class="btn btn-success" id="addContact">Add Contact</button>
+            <div class="alert alert-danger text-left mt-3" role="alert" id="alertAdd">
 
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered text-dark" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Edit Record</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="editFirstNameGroup">First Name</span>
+                        </div>
+                        <input type="text" name="First Name" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="editFirstNameGroup" id="editFirstName">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="editLastNameGroup">Last Name</span>
+                        </div>
+                        <input type="text" name="Last Name" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="editLastNameGroup" id="editLastName" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="editEmailGroup">Email</span>
+                        </div>
+                        <input type="email" name="Email" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="editEmailGroup" id="editEmail">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="editPhoneGroup">Phone #</span>
+                        </div>
+                        <input type="tel" name="Phone #" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-default4" id="editPhone" maxlength="10"
+                               minlength="10" required pattern="[0-9]{10}">
+                    </div>
+                    <input id="hiddenElementForId" name="hiddenElementForId" type="hidden"/>
+                    <div class="alert alert-danger text-left" role="alert" id="alertEdit">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeModal" class="btn btn-secondary" data-dismiss="modal">Close
+                    </button>
+                    <button type="button" class="btn btn-primary" id="updateContact">Save changes</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered text-dark" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Edit Record</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="editFirstNameGroup">First Name</span>
-                            </div>
-                            <input type="text" name="First Name" class="form-control" aria-label="Sizing example input"
-                                   aria-describedby="editFirstNameGroup" id="editFirstName">
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="editLastNameGroup">Last Name</span>
-                            </div>
-                            <input type="text" name="Last Name" class="form-control" aria-label="Sizing example input"
-                                   aria-describedby="editLastNameGroup" id="editLastName" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="editEmailGroup">Email</span>
-                            </div>
-                            <input type="email" name="Email" class="form-control" aria-label="Sizing example input"
-                                   aria-describedby="editEmailGroup" id="editEmail">
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="editPhoneGroup">Phone #</span>
-                            </div>
-                            <input type="tel" name="Phone #" class="form-control" aria-label="Sizing example input"
-                                   aria-describedby="inputGroup-sizing-default4" id="editPhone" maxlength="10"
-                                   minlength="10" required pattern="[0-9]{10}">
-                        </div>
-                        <input id="hiddenElementForId" name="hiddenElementForId" type="hidden"/>
-                        <div class="alert alert-danger text-left" role="alert" id="alertEdit">
 
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" id="closeModal" class="btn btn-secondary" data-dismiss="modal">Close
-                        </button>
-                        <button type="button" class="btn btn-primary" id="updateContact">Save changes</button>
-                    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered text-dark" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shareModalCenterTitle">Share Contact----work left</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <i class="fab fa-facebook fa-2x "></i>
+                    <i class="fab fa-twitter fa-2x  mx-4"></i>
+                    <i class="fab fa-2x fa-whatsapp "></i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Modal -->
-        <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered text-dark" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="shareModalCenterTitle">Share Contact----work left</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                       <i class="fab fa-facebook fa-2x "></i>
-                        <i class="fab fa-twitter fa-2x  mx-4"></i>
-                        <i class="fab fa-2x fa-whatsapp "></i>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
-        <script type="text/javascript" src="/bundle.js"></script>
-        <script type="text/javascript" src="/bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/bundle.js"></script>
+    <script type="text/javascript" src="/bundle.js"></script>
 </body>
 </html>
