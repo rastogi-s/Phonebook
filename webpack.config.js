@@ -5,19 +5,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-let outDirectory = path.resolve(__dirname, 'dist');
-let outputFilename = '[name].js';
+//let outDirectory = path.resolve(__dirname, 'dist');
+let outputFilename = 'bundle.js';
 
 module.exports = {
     mode: 'production',
-    entry: './src/main.js',
+    entry: './src/index.js',
     output: {
         filename: outputFilename,
-        path: outDirectory,
+        //path: outDirectory,
+        path: __dirname,
         publicPath: '/'
     },
     devServer: {
-        contentBase: outDirectory
+        //contentBase: outDirectory
+        contentBase: __dirname
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
@@ -36,7 +38,8 @@ module.exports = {
                 use: [{
                     loader: MiniCssExtractPlugin.loader,
                     options: {
-                        publicPath: '../'
+                        //publicPath: '../'
+                        publicPath: '/'
                     }
                 }, {
                     loader: "css-loader" // translates CSS into CommonJS
