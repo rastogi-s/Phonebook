@@ -7,17 +7,22 @@
 
 ## `Design`:
 
-1. `List Contacts:`<br> 
+1. `List Contacts:`
+ 
 ![](https://github.com/rastogi-s/Phonebook/blob/master/Gifs/ContactLists.gif)
 
-2. `Add Contact`:<br>
+2. `Add Contact:`
+
 ![](https://github.com/rastogi-s/Phonebook/blob/master/Gifs/AddContact.gif)
 
-3. `Edit Contact`:<br>
+3. `Edit Contact:`
+
 ![](https://github.com/rastogi-s/Phonebook/blob/master/Gifs/EditContact.gif)
 
-4. `Delete Contact`:<br>
+4. `Delete Contact:`
+
 ![](https://github.com/rastogi-s/Phonebook/blob/master/Gifs/DeleteContact.gif)
 
-5. `Search Contact`:<br>
+5. `Search Contact:`
+
 ![](https://github.com/rastogi-s/Phonebook/blob/master/Gifs/SearchContact.gif)
