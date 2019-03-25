@@ -13,6 +13,7 @@ import './../scss/main.scss';
     let hiddenElementForId;
     let searchBar;
     let searchButton;
+    let myConfirmModal;
 
     let createButton;
     let updateButton;
@@ -43,6 +44,7 @@ import './../scss/main.scss';
         updateButton = document.getElementById('updateContact');
         listDiv = document.getElementById('recordList');
         myModal = document.getElementById('exampleModalCenter');
+        myConfirmModal = document.getElementById('confirmModal');
         searchBar = document.getElementById('searchBar');
         contactListTab = document.getElementById('contactListTab');
         searchButton = document.getElementById('searchButton');
@@ -223,8 +225,12 @@ import './../scss/main.scss';
 
 
     function deleteRecord(e) {
-        let id = e.target.parentNode.parentNode.parentNode.id;
-        phoneBookService.deleteContact(id, findAllContacts);
+
+        let confirmFlag = confirm("Do you want to delete this record ?");
+        if(confirmFlag) {
+            let id = e.target.parentNode.parentNode.parentNode.id;
+            phoneBookService.deleteContact(id, findAllContacts);
+        }
     }
 
     function clearAllFields(container) {
