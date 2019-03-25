@@ -72,6 +72,8 @@ import './../scss/main.scss';
             clearAllFields(event.target.parentNode);
             contactListTab.click();
             document.getElementById('alertEdit').setAttribute('style', 'display:none');
+            document.getElementById('alertAdd').setAttribute('style', 'display:none');
+
         } else {
             console.log('error');
 
