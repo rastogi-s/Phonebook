@@ -9,7 +9,7 @@
 
 1. `List Contacts:`
  
-![](https://github.com/rastogi-s/Phonebook/blob/master/Gifs/ContactLists.gif)
+![](https://github.com/rastogi-s/Phonebook/blob/master/Gifs/ContactList.gif)
 
 2. `Add Contact:`
 
